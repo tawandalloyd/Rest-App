@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "182125630033",
+    "firebase_url": "https://lolo-af211.firebaseio.com",
+    "project_id": "lolo-af211",
+    "storage_bucket": "lolo-af211.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182125630033:android:d539654ee9c32056199e70",
+        "android_client_info": {
+          "package_name": "com.example.rest_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182125630033-dqb9ndq53mi5nsu7r78gt7omrqsg85ao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rest_app",
+            "certificate_hash": "f179e1f9e347c647c266bb049487ec27e245b9c6"
+          }
+        },
+        {
+          "client_id": "182125630033-ds6gufposbnoc4vbpbg1qvndipl8fgr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs518x6KnQVM6bpkwMOQT4XveQKDd4Hls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182125630033-ds6gufposbnoc4vbpbg1qvndipl8fgr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
