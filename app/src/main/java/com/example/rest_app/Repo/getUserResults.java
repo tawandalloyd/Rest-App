@@ -4,6 +4,7 @@ import com.example.rest_app.utils.STATUS;
 
 import java.util.ArrayList;
 
+
 public interface getUserResults {
 
     void allUsers(boolean wasSuccessful, ArrayList<Users> tours, STATUS status);

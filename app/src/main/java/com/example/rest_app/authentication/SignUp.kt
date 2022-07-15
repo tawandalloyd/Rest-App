@@ -9,7 +9,7 @@ import android.widget.Toast
 import com.example.rest_app.Firestore.Firestore
 import com.example.rest_app.MainActivity
 import com.example.rest_app.R
-import com.example.rest_app.models.Users
+import com.example.rest_app.models.UsersFirestore
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -77,7 +77,7 @@ class SignUp : AppCompatActivity() {
                     val user = auth.currentUser
                     val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                    val person = Users(
+                    val person = UsersFirestore(
                         firebaseUser.uid,
                         name.text.toString().trim(),
                         lastname.text.toString().trim(),

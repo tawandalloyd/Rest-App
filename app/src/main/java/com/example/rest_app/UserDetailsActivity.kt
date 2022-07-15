@@ -23,9 +23,10 @@ class UserDetailsActivity : AppCompatActivity(), getUserResults {
             Repository.getInstance().deleteUsers(id,this)
         }
 
-        textView3.text= name
-        textView4.text = username
-        textView2.text = id
+        name1.text= name
+        username2.text = username
+        email3.text = id
+        phone1.text
 
 
     }

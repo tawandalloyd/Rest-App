@@ -25,7 +25,7 @@ class MainAdapter(private val character: ArrayList<Users>):RecyclerView.Adapter<
       val username = itemView.findViewById<TextView>(R.id.userEmail)
 
          name.text = character.name
-         username.text = character.difficulty
+         username.text = character.username
      }
      init{
 

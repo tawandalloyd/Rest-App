@@ -4,18 +4,17 @@ import android.app.Activity
 import android.util.Log
 import com.example.rest_app.authentication.Login
 import com.example.rest_app.authentication.SignUp
-import com.example.rest_app.models.Users
+import com.example.rest_app.models.UsersFirestore
 import com.example.rest_app.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.firestore.auth.User
 
 class Firestore {
 
     private  val mFirestore  =  FirebaseFirestore.getInstance()
 
-    fun registerUser(activity: SignUp, userInfo : Users){
+    fun registerUser(activity: SignUp, userInfo : UsersFirestore){
         //the "users" is collection name
         mFirestore.collection(Constants.USERS)
             //document id for user fields
@@ -48,7 +47,7 @@ class Firestore {
             .get()
             .addOnSuccessListener { document ->
                 Log.i(activity.javaClass.simpleName,document.toString())
-                val user = document.toObject(Users::class.java)
+                val user = document.toObject(UsersFirestore::class.java)
 
                 when(activity){
                     is Login -> {

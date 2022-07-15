@@ -23,10 +23,10 @@ public class Repository {
 
     // Singleton
     private static Repository instance ;
-    private String SERVER_URL = "http://192.168.8.100:3000";
-    private String GET_TOURS_URL = SERVER_URL + "/api/v1/tours";
-    private String DELETE_TOURS_URL = SERVER_URL +"/api/v1/tours";
-    private String CREATE_TOURS = SERVER_URL+"/api/v1/tours";
+    private String SERVER_URL = "http://192.168.8.103:3003";
+    private String GET_USERS_URL = SERVER_URL + "/api/v1/users";
+    private String DELETE_USERS_URL = SERVER_URL +"/api/v1/users";
+    private String CREATE_USERS = SERVER_URL+"/api/v1/users";
     private OkHttpClient client;
     public  String deleted;
 
@@ -51,7 +51,7 @@ public class Repository {
 
         RequestBody body = RequestBody.create(user.toJson().toString(),JSON);
         Request request = new Request.Builder()
-                .url(CREATE_TOURS)
+                .url(CREATE_USERS)
                 .post(body)
                 .build();
 
@@ -76,7 +76,7 @@ public class Repository {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url(DELETE_TOURS_URL+"/"+id)
+                .url(DELETE_USERS_URL +"/"+id)
                 .delete()
                 .build();
 
@@ -112,7 +112,7 @@ public class Repository {
         client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url(GET_TOURS_URL)
+                .url(GET_USERS_URL)
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
@@ -131,7 +131,7 @@ public class Repository {
                         JSONObject root = new JSONObject(jsonString);
 
                         // Extract List
-                        JSONArray usersJSONArray = root.getJSONArray("users");
+                        JSONArray usersJSONArray = root.getJSONArray("data");
 
                         // Iterate the array
                         for (int i = 0; i < usersJSONArray.length(); i++){

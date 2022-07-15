@@ -8,11 +8,10 @@ import android.widget.Toast
 import com.example.rest_app.Firestore.Firestore
 import com.example.rest_app.MainActivity
 import com.example.rest_app.R
-import com.example.rest_app.models.Users
+import com.example.rest_app.models.UsersFirestore
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.auth.User
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -88,7 +87,7 @@ class Login : AppCompatActivity() {
 
     }
 
-    fun userLoginSuccess(user: Users){
+    fun userLoginSuccess(user: UsersFirestore){
         Log.i("First Name", user.firstname)
         Log.i("LastName", user.lastname)
         Log.i("email",user.email)

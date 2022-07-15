@@ -23,14 +23,14 @@ class CreateUser : AppCompatActivity(), getUserResults {
     }
 
     private fun addUser() {
-        val tourName = name.text.toString()
+        val firstName = tourname.text.toString()
 
-        val size = size.text.toString()
-        val duration = duration.text.toString()
-        val difficult = difficulty.text.toString()
+        val uName = username.text.toString()
+        val eMail = email.text.toString()
+        val phone = phone3.text.toString()
+        val website = website4.text.toString()
 
-        val user =
-            Users(tourName, duration, size, difficult)
+        val user = Users(firstName, uName, eMail, phone,website)
         Repository.getInstance().addUsers(user,this)
     }
 

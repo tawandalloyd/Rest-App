@@ -4,24 +4,26 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Users {
-    //attr
-    private String name, duration, maxGroupSize, difficulty, _id;
+    //attributes
+    private String name,username, email, phone, website, _id;
 
 
 
-    public Users(String name, String duration, String maxGroupSize, String difficulty) {
+    public Users(String name, String username, String email, String phone, String website) {
         this.name = name;
-        this.duration = duration;
-        this.maxGroupSize = maxGroupSize;
-        this.difficulty = difficulty;
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        this.website = website;
     }
 
     public Users(JSONObject object){
         try {
             this.name = object.getString("name");
-            this.duration = object.getString("duration");
-            this.maxGroupSize = object.getString("maxGroupSize");
-            this.difficulty = object.getString("difficulty");
+            this.username = object.getString("username");
+            this.email = object.getString("email");
+            this.phone = object.getString("phone");
+            this.website = object.getString("website");
             this._id = object.getString("_id");
         } catch (JSONException e) {
             e.printStackTrace();
@@ -36,25 +38,28 @@ public class Users {
         return name;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getUsername(){return username;}
+
+    public String getEmail() {
+        return email;
     }
 
-    public String getMaxGroupSize() {
-        return maxGroupSize;
+    public String getPhone() {
+        return phone;
     }
 
-    public String getDifficulty() {
-        return difficulty;
+    public String getWebsite() {
+        return website;
     }
 
     public JSONObject toJson(){
         JSONObject tour = new JSONObject();
         try {
             tour.put("name",this.name);
-            tour.put("duration",this.duration);
-            tour.put("maxGroupSize",this.maxGroupSize);
-            tour.put("difficulty",this.difficulty);
+            tour.put("username",this.username);
+            tour.put("email",this.email);
+            tour.put("phone",this.phone);
+            tour.put("website",this.website);
 
         } catch (JSONException e) {
             e.printStackTrace();

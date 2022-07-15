@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentication.SignUp">
+    tools:context=".CreateUser">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -76,11 +76,11 @@
             </androidx.appcompat.widget.AppCompatEditText>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/difficulty"
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="duration"
+                android:hint="username"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:paddingStart="19dp"
@@ -89,11 +89,11 @@
             </androidx.appcompat.widget.AppCompatEditText>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/size"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="size"
+                android:hint="email"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:paddingStart="19dp"
@@ -102,11 +102,24 @@
             </androidx.appcompat.widget.AppCompatEditText>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/duration"
+                android:id="@+id/website4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="difficulty"
+                android:hint="website"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingStart="19dp"
+                android:textColor="@color/greyHex">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phone3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="phone"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:paddingStart="19dp"

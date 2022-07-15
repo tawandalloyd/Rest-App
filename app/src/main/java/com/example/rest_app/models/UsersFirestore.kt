@@ -3,7 +3,7 @@ package com.example.rest_app.models
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Users (
+data class UsersFirestore (
     val  id : String = "",
     val firstname : String = "",
     val lastname : String = "",
@@ -29,12 +29,12 @@ data class Users (
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Users> {
-        override fun createFromParcel(parcel: Parcel): Users {
-            return Users(parcel)
+    companion object CREATOR : Parcelable.Creator<UsersFirestore> {
+        override fun createFromParcel(parcel: Parcel): UsersFirestore {
+            return UsersFirestore(parcel)
         }
 
-        override fun newArray(size: Int): Array<Users?> {
+        override fun newArray(size: Int): Array<UsersFirestore?> {
             return arrayOfNulls(size)
         }
     }
